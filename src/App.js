@@ -6,7 +6,7 @@ function App(props) {
   const getData = async () => {
     try {
       let { data } = await axios.get("https://api.openweathermap.org/data/2.5/weather?q=surabaya&units=imperial&appid=4ad9126a1f97c33e5930db5297993398");
-      setData(data);
+      setData(data.main);
     } catch (error) {
       throw error;
     }
@@ -20,10 +20,11 @@ function App(props) {
   return (
     <div className="card">
       <center>
-        <h3>kota: {data.name}</h3>
-        <h4>temp: {data.main.temp}</h4>
-        <h4>temp min: {data.main.temp_min}</h4>
-        <h4>temp max: {data.main.temp_max}</h4>
+        <h2>Kota: Surabaya</h2>
+        <h3>temp: {data.temp} F</h3>
+        <h3>temp min: {data.temp_min} F</h3>
+        <h3>temp max: {data.temp_max} F</h3>
+        <h3>kelembaban: {data.humidity}</h3>
       </center>
     </div>
   );
