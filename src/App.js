@@ -13,19 +13,20 @@ function App(props) {
   };
 
   function fToC(fahrenheit) {
-    return ((fahrenheit - 32) * 5) / 9;
+    return Math.round(((fahrenheit - 32) * 5) / 9);
   }
 
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <div className="card">
       <h2>Kota: Surabaya</h2>
       <h3>temp: {fToC(data.temp)} C</h3>
       <h3>temp min: {fToC(data.temp_min)} C</h3>
       <h3>temp max: {fToC(data.temp_max)} C</h3>
-      <h3>kelembaban: {data.humidity}</h3>
+      <h3>kelembaban: {data.humidity} %</h3>
       <div className="credit">
         <p>
           created by{" "}
