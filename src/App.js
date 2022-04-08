@@ -12,15 +12,21 @@ function App(props) {
     }
   };
 
+  function fToC(fahrenheit) {
+    var fTemp = fahrenheit;
+    var fToCel = ((fTemp - 32) * 5) / 9;
+    return fToCel;
+  }
+
   useEffect(() => {
     getData();
   }, []);
   return (
     <div className="card">
       <h2>Kota: Surabaya</h2>
-      <h3>temp: {data.temp} F</h3>
-      <h3>temp min: {data.temp_min} F</h3>
-      <h3>temp max: {data.temp_max} F</h3>
+      <h3>temp: {fToC(data.temp)} C</h3>
+      <h3>temp min: {fToC(data.temp_min)} C</h3>
+      <h3>temp max: {fToC(data.temp_max)} C</h3>
       <h3>kelembaban: {data.humidity}</h3>
       <div className="credit">
         <p>
