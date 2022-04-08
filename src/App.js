@@ -13,9 +13,7 @@ function App(props) {
   };
 
   function fToC(fahrenheit) {
-    var fTemp = fahrenheit;
-    var fToCel = ((fTemp - 32) * 5) / 9;
-    return fToCel;
+    return ((fahrenheit - 32) * 5) / 9;
   }
 
   useEffect(() => {
