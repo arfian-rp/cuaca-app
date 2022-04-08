@@ -15,17 +15,21 @@ function App(props) {
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(data);
   return (
     <div className="card">
-      <center>
-        <h2>Kota: Surabaya</h2>
-        <h3>temp: {data.temp} F</h3>
-        <h3>temp min: {data.temp_min} F</h3>
-        <h3>temp max: {data.temp_max} F</h3>
-        <h3>kelembaban: {data.humidity}</h3>
-      </center>
+      <h2>Kota: Surabaya</h2>
+      <h3>temp: {data.temp} F</h3>
+      <h3>temp min: {data.temp_min} F</h3>
+      <h3>temp max: {data.temp_max} F</h3>
+      <h3>kelembaban: {data.humidity}</h3>
+      <div className="credit">
+        <p>
+          created by{" "}
+          <a href="https://arfian-id.web.app">
+            <i>Arfian</i>
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
