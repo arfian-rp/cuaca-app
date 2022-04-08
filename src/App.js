@@ -30,7 +30,7 @@ function App(props) {
       <div className="credit">
         <p>
           created by{" "}
-          <a target="_blank" href="https://arfian-id.web.app">
+          <a rel="noreferrer" target="_blank" href="https://arfian-id.web.app">
             <i>Arfian</i>
           </a>
         </p>
